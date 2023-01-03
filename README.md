@@ -13,3 +13,4 @@ Introductory DevOps and automation exercices at Holberton School
 *   clean: Cleanup the content of the directory `dist/`
 *   post: Create a new blog post whose filename and title come from the
     environment variables `POST_TITLE` and `POST_NAME`.
+*   help: Display the documentation of all targets
