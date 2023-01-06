@@ -4,7 +4,7 @@ on:
   schedule:
     - cron: "0 3 30 * *"
 jobs:
-  check_make:
+  check_build:
     runs-on: ubuntu-18.04
     steps:
       - name: Check out repository code
@@ -17,3 +17,15 @@ jobs:
         run: |
           cd module3_task1
           make build
+      - name: Test post
+        run: |
+          cd module3_task1
+          make POST_TITLE="Test" POST_NAME="name" post
+      - name: Test clean
+        run: |
+          cd module3_task1
+          make clean
+      - name: Test help
+        run: |
+          cd module3_task1
+          make help
