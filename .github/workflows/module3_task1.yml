@@ -1,0 +1,17 @@
+name: module3_task1
+on:
+  push:
+  schedule:
+    - cron: "0 3 30 * *"
+jobs:
+  check_make:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Install tools
+        run: |
+          cd module3_task1
+          ./setup.sh
+      - name: Test hugo build
+        run: make build
