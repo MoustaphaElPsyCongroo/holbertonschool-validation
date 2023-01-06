@@ -14,4 +14,6 @@ jobs:
           cd module3_task1
           ./setup.sh
       - name: Test hugo build
-        run: make build
+        run: |
+          cd module3_task1
+          make build
