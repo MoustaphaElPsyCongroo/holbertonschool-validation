@@ -7,8 +7,9 @@ jobs:
   check_make:
     runs-on: ubuntu-latest
     steps:
-      - name: Test make's presence and help
+      - name: Check out repository code
         uses: actions/checkout@v3
+      - name: Test make's presence and help
         run: |
           cd module3_task0
           make help
