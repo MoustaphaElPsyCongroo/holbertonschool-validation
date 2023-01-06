@@ -1,0 +1,12 @@
+name: module3_task0
+on:
+  push:
+  schedule:
+    - cron: "0 3 30 * * *"
+jobs:
+  runs-on: ubuntu-latest
+  steps:
+    - name: Test make's presence and help
+      run: |
+        cd module3_task0
+        make help
