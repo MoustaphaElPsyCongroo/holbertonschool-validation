@@ -18,3 +18,12 @@ package: ## Put the build in an archive
 help: ## Display the documentation of all targets
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) \
 	| sed -n 's/^\(.*\): \(.*\)##\(.*\)/\1:\3/p'
+
+unit-tests: ## ???
+	ls
+
+validate: ## ???
+	ls
+
+integration-tests: ## ???
+	ls
