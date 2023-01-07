@@ -22,10 +22,6 @@ jobs:
         run: |
           cd module3_task2
           make POST_TITLE="Test" POST_NAME="name" post
-      - name: Test clean
-        run: |
-          cd module3_task2
-          make clean
       - name: Test help
         run: |
           cd module3_task2
@@ -34,6 +30,7 @@ jobs:
         run: |
           cd module3_task2
           make package
+          make clean
       - name: Store archive
         if: ${{ success()}}
         uses: actions/upload-artifact@v3

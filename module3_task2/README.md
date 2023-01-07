@@ -14,3 +14,7 @@ Introductory DevOps and automation exercices at Holberton School
 *   post: Create a new blog post whose filename and title come from the
     environment variables `POST_TITLE` and `POST_NAME`.
 *   help: Display the documentation of all targets
+*   package
+*   unit-tests (??)
+*   validate (??)
+*   integration-tests (??)
