@@ -9,10 +9,6 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: lint syntax
-        run: |
-          cd module3_task1/
-          make lint
       - name: Install tools
         run: |
           cd module3_task1
