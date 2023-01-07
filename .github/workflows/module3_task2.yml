@@ -29,6 +29,7 @@ jobs:
       - name: Test archive
         run: |
           cd module3_task2
+          make clean
           make package
           make clean
       - name: Store archive
