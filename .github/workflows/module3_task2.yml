@@ -13,7 +13,7 @@ jobs:
       - name: Install tools
         run: |
           cd module3_task2
-          sudo ./setup.sh
+          ./setup.sh
       - name: Validate the makefile
         run: |
           cd module3_task2/
