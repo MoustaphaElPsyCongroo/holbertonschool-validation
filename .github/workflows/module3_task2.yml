@@ -14,27 +14,25 @@ jobs:
         run: |
           cd module3_task2
           sudo ./setup.sh
-      - name: Test hugo build
+      - name: Validate the makefile
         run: |
-          cd module3_task2
+          cd module3_task2/
+          make lint
           make build
-      - name: Test post
+          make POST_TITLE=Test POST_NAME='TestSuccess' post
+          make unit-tests
+      - name: Integration testing
         run: |
           cd module3_task2
-          make POST_TITLE="Test" POST_NAME="name" post
-      - name: Test help
-        run: |
-          cd module3_task2
-          make help
-      - name: Test archive
-        run: |
-          cd module3_task2
-          make clean
+          make validate
+          make integration-tests
+          make unit-tests
           make package
           make clean
-      - name: Store archive
+      - name: Build archive
+        # Success returns true if none of the previous steps failed
         if: ${{ success()}}
         uses: actions/upload-artifact@v3
         with:
-          name: zipsave
+          name: upload-package
           path: module3_task2/awesome-website.zip
