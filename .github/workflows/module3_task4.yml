@@ -33,7 +33,7 @@ jobs:
 
       - name: Integration tests
         run: |
-          cd module4_task3/
+          cd module3_task4/
           make integration-tests
           make validate
           make unit-tests
